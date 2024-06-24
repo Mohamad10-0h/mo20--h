@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Real Estate </title>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: large;
+  }
+
+  th, td {
+    border: 2px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+
+  th {
+    background-color: #c5c4c4;
+  }
+</style>
+</head>
+<table class="link-table">
+  <tr>
+    <td><a href="الصفحة الئيسية.html">home page</a></td>
+    <td><a href="من نحن2.html">about us</a></td>
+    <td><a href="صفحة العقارات.html">properties</a></td>
+  </tr>
+
+</table>
+<body>
+
+  <h1>قائمة العقارات</h1>
+  <table>
+    <tr>
+      <th>عدد الغرف </th>
+      <th> تفاصيل مميزة</th>
+      <th>المدينة</th>
+      <th>الإيجار الشهري</th>
+      <th>إظهار التفاصيل</th>
+      <th>متابعة</th>
+    </tr>
+    
+    <tr>
+      <td> 2 غرف</td>
+      <td> شقة مميزة تتسم بموقع ممتاز بوسط المدينة  </td>
+      <td> دمشق : المزة الشرقية </td>
+      <td> 2000000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property1')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+
+    <tr>
+      <td> 4 غرف</td>
+      <td> اكساء جديد بأعلى المعايير المتبعة  </td>
+      <td> حلب : حي الازهري </td>
+      <td> 5650000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property2')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+
+        <tr>
+       <td> 3 غرف</td>
+      <td> تشطيبات عالية الجودة و مواد بناء بمعايير عالمية </td>
+      <td> حلب : الفردوس </td>
+      <td> 4210000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property3')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+
+        <tr>
+       <td> 2 غرف</td>
+      <td> جديدة بالكامل مع موقفين خاصين للسيارات </td>
+      <td> دمشق : برزة </td>
+      <td> 1673000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property4')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+
+        <tr>
+       <td> 3 غرف</td>
+      <td> نوافذ تضمن لك دخول الكثير من اشعة الشمس </td>
+      <td> اللاذقية : الصفصافة </td>
+      <td> 2955000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property5')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+
+        <tr>
+       <td> 3 غرف</td>
+      <td> شقة فاخرة في منطقة حيوية وهادئة </td>
+      <td> اللاذقية : الشرفة </td>
+      <td> 4880000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property6')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+
+        <tr>
+       <td> 2 غرف</td>
+      <td> مساحة كبيرة وواسعة </td>
+      <td> حمص : حي النضال </td>
+      <td> 2389000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property7')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+
+        <tr>
+       <td> 1 غرف</td>
+      <td> نظام امان عالي الجودة و على مدار الساعة  </td>
+      <td> طرطوس : حي الساحل </td>
+      <td> 1165000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property8')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+
+        <tr>
+       <td> 2 غرف</td>
+      <td> حديقة خاصة وممشى واسع </td>
+      <td> حمص : حي العربي </td>
+      <td> 2952000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property9')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+
+        <tr>
+       <td> 3 غرف</td>
+      <td> مرافق رياضية متكاملة و موقف سيارات مغطى  </td>
+      <td> طرطوس : الدريكيش </td>
+      <td> 6549000 </td>
+      <td><input type="checkbox" onchange="showDetails(this, 'property10')"></td>
+      <td><button onclick="showForm()">تقديم طلب</button></td>
+    </tr>
+  </table>
+
+ 
+  <div id="details" style="display: none;">
+    <h2>تفاصيل العقار</h2>
+
+    <div id="property1" style="display: none;">
+      <h3> شقة مفروشة و جديدة كليأ ــــــــ غرفتي نوم ــــــــ صالة كبيرة ــــــــــ موقع ممتاز  </h3>
+      <img src="https://th.bing.com/th/id/OIP.9EdLjX1NDHv45aDRbXDA1QHaEK?w=324&h=182&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 1">
+      <img src="https://th.bing.com/th/id/OIP.nABMV8rf4n501LUJGLnAUQHaIA?w=185&h=200&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 1 إضافي">
+    </div>
+
+    <div id="property2" style="display: none;">
+      <h3> بلكون مساحة 12 متر ـــــــ طابو ـــــ 4 غرف نوم ــــ مفروشة ـــــ طابق ثاني  </h3>
+      <img src="https://th.bing.com/th/id/OIP.iEJfe7Hm05K1sX3BIDil3QHaFj?w=210&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2">
+      <img src="https://th.bing.com/th/id/OIP.Rs4-vQZzY7eaYnUevT-4cQHaFH?w=290&h=200&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2 إضافي">
+    </div>
+
+    
+    <div id="property3" style="display: none;">
+      <h3> بناء بمعايير عالمية ـــــــ شرفة كبيرة نسبيأ ـــــــ حمامين ـــــــ كراج  </h3>
+      <img src="https://th.bing.com/th/id/OIP._5eqN5kqv7QlRmJX91BqDwHaEp?w=305&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2">
+      <img src="https://th.bing.com/th/id/OIP.dVxQWRYswE22DW15ZxNktQHaJQ?w=167&h=208&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2 إضافي">
+    </div>
+
+        <div id="property4" style="display: none;">
+      <h3>  موقف خاص ــــ 2غرفة ماستر ــــ موقع مميز ــــ تمديدات جديدة وكامله  </h3>
+      <img src="https://th.bing.com/th/id/OIP.3OfJLiNvPgnGW3G5dyQpzAHaJ4?w=194&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2">
+      <img src="https://th.bing.com/th/id/OIP.PXudu63X1tINO0vm6BET1gHaOX?w=115&h=183&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2 إضافي">
+    </div>
+
+        <div id="property5" style="display: none;">
+      <h3> غرفتين و غرفة خادمة ــــــ منطقة مخدمة بالكامل ــــــ صالة كبيرة ـــــ مطبخ وصالة مشمسين  </h3>
+      <img src="https://th.bing.com/th?id=OIF.%2fCeuusovPI25qJ3Lvz2pJQ&w=155&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2">
+      <img src="https://th.bing.com/th/id/OIP.Z-qfNDcni-ZBY7KQQ7gn2wHaJQ?w=147&h=183&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2 إضافي">
+    </div>
+
+        <div id="property6" style="display: none;">
+      <h3> شقة مقروشة بالكامل بأثاث فاخر وجديد ـــــــ حي امن ومراقب بالكامل ــــــ صالة متوسطة الحجم  </h3>
+      <img src="https://th.bing.com/th/id/OIP.iE7mcw3w2aFFDhXP9A1lggHaE8?w=199&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2">
+      <img src="https://th.bing.com/th/id/OIF.nxJ2cfDeIRDn5zE2FfmqQQ?w=115&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2 إضافي">
+    </div>
+
+        <div id="property7" style="display: none;">
+      <h3> مساحات واسعة داخل المنزل ــــ غرفة علوية ــــ وغرفة ضيوف مفتوحة بزجاج عاكس لأشعة الشمس  </h3>
+      <img src="https://th.bing.com/th/id/OIP.5JZZNpN3T1Lu7waoO8ehGQHaE8?w=301&h=201&c=7&r=0&o=5&dpr=1.1&pid=1.77" alt="عقار 2">
+      <img src="https://th.bing.com/th/id/OIP.PTGaLOO5hU_FRYg4V2xdugHaGj?w=227&h=201&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2 إضافي">
+    </div>
+
+        <div id="property8" style="display: none;">
+      <h3> كاميرات مراقبة تعمل على مدار الساعة ـــــ نظام حماية من شركة معروفة ورائدة ــــ غرفة ماستر ــــ صالة صغيرة الى متوسطة </h3>
+      <img src="https://th.bing.com/th/id/OIP.NITsRMV1oqrzYLs61gGtsgHaE8?w=302&h=201&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2">
+      <img src="https://th.bing.com/th/id/OIP.cIwmNwqSu6BA4nqPDy7MbAHaFB?w=277&h=188&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2 إضافي">
+    </div>
+
+        <div id="property9" style="display: none;">
+      <h3> حديقة خاصة وممشى يستمر حولي المنزل ــــ غرف كبيرة ــــ ممشى دراجات هوائية بالشارع المقابل للمنزل ـــــ وكراجين مغلقين </h3>
+      <img src="https://th.bing.com/th/id/OIP.DIo9UQ0lW7V4zNgL7Ti0lgHaGy?w=205&h=188&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2">
+      <img src="https://th.bing.com/th/id/OIP.FOpganVlh_z1kGs7pnCXGAHaE8?w=229&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2 إضافي">
+    </div>
+
+        <div id="property10" style="display: none;">
+      <h3> مبنى سكني حديث ـــــ 3 غرف مع فرش جديد ـــــ طراز عصري وحديث ــــ مرافق رياضية خاصة وعامة </h3>
+      <img src="https://th.bing.com/th/id/OIP.w5sJPjzTCynhIZ5F_SKNhAHaE8?w=299&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2">
+      <img src="https://th.bing.com/th/id/OIP.4k21e2vqwsdzMqpP1HetUAAAAA?w=244&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="عقار 2 إضافي">
+    </div>
+  
+
+  
+  <div id="form" style="display: none;">
+    <h2>نموذج طلب</h2>
+    <form onsubmit="submitForm()">
+      <label for="name">الاسم:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">البريد الإلكتروني:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">رقم الهاتف:</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label for="nationalId">الرقم الوطني</label><br>
+      <input type="nationalId" id="nationalId" name="nationalId" required><br><br>
+
+      <label for="birhday">تاريخ الميلاد</label>
+      <input type="birthday" id="birhday" name="birthday" required><br><br>
+
+      <input type="submit" value="إرسال">
+    </form>
+  </div>
+
+  
+  <script>
+    function showDetails(checkbox, propertyId) {
+      var details = document.getElementById("details");
+      var property = document.getElementById(propertyId);
+      
+      
+      var propertyDetails = details.querySelectorAll("div[id^='property']");
+      propertyDetails.forEach(function(item) {
+        item.style.display = "none";
+      });
+      
+      if (checkbox.checked) {
+        details.style.display = "block";
+        property.style.display = "block";
+      } else {
+        details.style.display = "none";
+        property.style.display = "none";
+      }
+    }
+
+    function showForm() {
+      var form = document.getElementById("form");
+      form.style.display = "block";
+    }
+
+    function submitForm() {
+      alert("تم إرسال النموذج بنجاح!");
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تنسيق خلفية الصفحة</title>
+<style>
+    body {
+        background-image: url(images.jfif);
+        opacity: 1;
+        background-position: top;
+        background-size: unset;
+        font-family: Arial, sans-serif;
+        font-size: larger;
+        color: #ffffff; 
+        text-shadow: 4px 4px 8px rgb(0, 0, 0);
+    }
+</style>
+</head>
+<body>
+   
+</html>
